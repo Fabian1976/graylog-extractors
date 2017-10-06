@@ -44,20 +44,6 @@
       "condition_value": ""
     },
     {
-      "title": "HTTP",
-      "extractor_type": "grok",
-      "converters": [],
-      "order": 3,
-      "cursor_strategy": "copy",
-      "source_field": "message",
-      "target_field": "",
-      "extractor_config": {
-        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, ReferencedHost: %{DATA:ref_host}?, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
-      },
-      "condition_type": "none",
-      "condition_value": ""
-    },
-    {
       "title": "HTTP2",
       "extractor_type": "grok",
       "converters": [],
@@ -67,20 +53,6 @@
       "target_field": "",
       "extractor_config": {
         "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, UserName: %{WORD:username}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ClientVersion: %{DATA:client_version}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, ReferencedHost: %{DATA:ref_host}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
-      },
-      "condition_type": "none",
-      "condition_value": ""
-    },
-    {
-      "title": "HTTP3",
-      "extractor_type": "grok",
-      "converters": [],
-      "order": 5,
-      "cursor_strategy": "copy",
-      "source_field": "message",
-      "target_field": "",
-      "extractor_config": {
-        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ClientVersion: %{DATA:client_version}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, ReferencedHost: %{DATA:ref_host}?, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
       },
       "condition_type": "none",
       "condition_value": ""
@@ -109,62 +81,6 @@
       "target_field": "",
       "extractor_config": {
         "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, UserName: %{WORD:username}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ClientVersion: %{DATA:client_version}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, HTTPResponse: %{INT:http_response}, HTTPReferer: %{DATA:http_ref}, ReferencedHost: %{DATA:ref_host}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
-      },
-      "condition_type": "none",
-      "condition_value": ""
-    },
-	{
-      "title": "DNS1",
-      "extractor_type": "grok",
-      "converters": [],
-      "order": 8,
-      "cursor_strategy": "copy",
-      "source_field": "message",
-      "target_field": "",
-      "extractor_config": {
-        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSQuery: %{DATA:dns_query}, DNSRecordType: %{DATA:dns_type}, DNSResponseType: %{DATA:dnsResponseType}, DNS_TTL: %{DATA:dns_ttl}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
-      },
-      "condition_type": "none",
-      "condition_value": ""
-    },
-	{
-      "title": "DNS2",
-      "extractor_type": "grok",
-      "converters": [],
-      "order": 9,
-      "cursor_strategy": "copy",
-      "source_field": "message",
-      "target_field": "",
-      "extractor_config": {
-        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSQuery: %{DATA:dns_query}, DNSRecordType: %{DATA:dns_type}, DNSResponseType: %{DATA:dnsResponseType}, DNS_TTL: %{DATA:dns_ttl}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
-      },
-      "condition_type": "none",
-      "condition_value": ""
-    },
-    {
-      "title": "DNS3",
-      "extractor_type": "grok",
-      "converters": [],
-      "order": 10,
-      "cursor_strategy": "copy",
-      "source_field": "message",
-      "target_field": "",
-      "extractor_config": {
-        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSRecordType: %{DATA:dns_type}, DNSResponseType: %{DATA:dnsResponseType}, DNS_TTL: %{DATA:dns_ttl}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
-      },
-      "condition_type": "none",
-      "condition_value": ""
-    },
-	{
-      "title": "DNS4",
-      "extractor_type": "grok",
-      "converters": [],
-      "order": 11,
-      "cursor_strategy": "copy",
-      "source_field": "message",
-      "target_field": "",
-      "extractor_config": {
-        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSRecordType: %{DATA:dns_type}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
       },
       "condition_type": "none",
       "condition_value": ""
@@ -225,7 +141,217 @@
       },
       "condition_type": "none",
       "condition_value": ""
+    },
+    {
+      "title": "DNS1",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 8,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSQuery: %{DATA:dns_query}, DNSRecordType: %{DATA:dns_type}, DNSResponseType: %{DATA:dnsResponseType}, DNS_TTL: %{DATA:dns_ttl}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "DNS4",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 11,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSRecordType: %{DATA:dns_type}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "DNS3",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 10,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSRecordType: %{DATA:dns_type}, DNSResponseType: %{DATA:dnsResponseType}, DNS_TTL: %{DATA:dns_ttl}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "DNS2",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 9,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSQuery: %{DATA:dns_query}, DNSRecordType: %{DATA:dns_type}, DNSResponseType: %{DATA:dnsResponseType}, DNS_TTL: %{DATA:dns_ttl}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTP",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 3,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, ReferencedHost: %{DATA:ref_host}?, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTP3",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 5,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ClientVersion: %{DATA:client_version}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, ReferencedHost: %{DATA:ref_host}?, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTPS5",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, UserName: %{WORD:username}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTP4",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, UserName: %{WORD:username}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ClientVersion: %{DATA:client_version}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, HTTPResponse: %{INT:http_response}, HTTPReferer: %{DATA:http_ref}, ReferencedHost: %{DATA:ref_host}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTPS6",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, UserName: %{WORD:username}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTPS7",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, UserName: %{WORD:username}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTPS8",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, UserName: %{WORD:username}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ClientVersion: %{DATA:client_version}, ApplicationProtocol: %{WORD:appProtocol}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, HTTPResponse: %{INT:http_response}, ReferencedHost: %{DATA:ref_host}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTPS9",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, UserName: %{WORD:username}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ClientVersion: %{DATA:client_version}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, HTTPResponse: %{INT:http_response}, ReferencedHost: %{DATA:ref_host}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTP5",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, UserName: %{WORD:username}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ClientVersion: %{DATA:client_version}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, HTTPReferer: %{DATA:http_ref}, ReferencedHost: %{DATA:ref_host}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "HTTP6",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, UserName: %{WORD:username}, UserAgent: %{DATA:user_agent}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, ReferencedHost: %{DATA:ref_host}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}, URL: %{URI:URL}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "993-1",
+      "extractor_type": "grok",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "",
+      "extractor_config": {
+        "grok_pattern": "%{SYSLOGTIMESTAMP:timestamp} %{HOSTNAME:hostname} %{WORD:field}: Protocol: %{WORD:protocol}, SrcIP: %{IP:src_ip}, OriginalClientIP: ::, DstIP: %{IP:dest_ip}, SrcPort: %{INT:src_port}, DstPort: %{INT:dest_port}, TCPFlags: %{WORD:flags}, IngressInterface: %{DATA:ingress_int}, EgressInterface: %{WORD:egress_int}, IngressZone: %{HOSTNAME:ingress_zone}, EgressZone: %{HOSTNAME:egress_zone}, DE: %{DATA:detect_engine}, Policy: %{DATA:policy}, ConnectType: %{WORD:connectType}, AccessControlRuleName: %{DATA:aclRuleName}, AccessControlRuleAction: %{DATA:aclRuleAction}, Prefilter Policy: %{DATA:pref_policy}, UserName: %{WORD:username}, Client: %{DATA:client}, ApplicationProtocol: %{WORD:appProtocol}, WebApplication: %{DATA:web_app}, InitiatorPackets: %{NUMBER:initPackets}, ResponderPackets: %{NUMBER:responderPackets}, InitiatorBytes: %{NUMBER:initBytes}, ResponderBytes: %{NUMBER:respondBytes}, NAPPolicy: %{DATA:NaPPolicy}, DNSResponseType: %{DATA:dnsResponseType}, Sinkhole: %{WORD:sinkhole}, URLCategory: %{DATA:urlCategory}, URLReputation: %{DATA:urlReputation}"
+      },
+      "condition_type": "none",
+      "condition_value": ""
     }
-],
+  ],
   "version": "2.1.0-SNAPSHOT"
 }
